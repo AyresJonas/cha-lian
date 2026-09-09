@@ -78,6 +78,10 @@ def reservar(index):
     return jsonify(db.get(Item._id == index))
 
 
+@app.route("/alive")
+def keep_alive():
+    return 200;
+
 @app.route("/")
 def index():
     images = []
